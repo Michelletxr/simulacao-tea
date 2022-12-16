@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 
 path = os.path.abspath(".")
 
-data = pd.read_csv('/home/michelle/Downloads/autism_dataset.csv', encoding='utf-8')
+data = pd.read_csv('./autism_dataset.csv', encoding='utf-8')
 
 
 df = pd.DataFrame(data)
