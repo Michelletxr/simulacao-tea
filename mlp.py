@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 
 path = os.path.abspath(".")
 
-data = pd.read_csv('/home/michelle/Downloads/autism_dataset.csv', encoding='utf-8')
+data = pd.read_csv('./autism_dataset.csv', encoding='utf-8')
 
 
 df = pd.DataFrame(data)
@@ -88,6 +88,7 @@ AO = round((A+O)/2)
 eixo_x = [O, AO, A]
 eixo_y = []
 for it in eixo_x:
+    print(it)
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1, random_state=5) 
 
     mlp = MLPClassifier(hidden_layer_sizes=it, activation='relu', solver='adam')
